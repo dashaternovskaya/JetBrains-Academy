@@ -72,7 +72,7 @@ def main():
                 print(json_message)
                 break
             # 3. When an exception occurs, you know that you found the first letter of the password
-            elif response["result"] == "Wrong password!" and delay >= 0.1:  # "Exception happened during login":
+            elif response["result"] == "Wrong password!" and delay >= 0.1:  # "Exception happened during login"
                 correct_password = password
 
 

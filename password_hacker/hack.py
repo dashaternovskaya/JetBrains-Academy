@@ -9,6 +9,7 @@ import time
 
 
 def generate_login():
+    # File 'logins.txt' is a dictionary of typical admin logins
     with open('logins.txt', 'r') as logins_file:
         for line in logins_file:
             word_cases = list(map(lambda x: ''.join(x), itertools.product(*([letter.lower(), letter.upper()] for letter in line.strip('\n')))))
@@ -23,6 +24,8 @@ def generate_password():
     # for n in itertools.count(1):  # itertools.count(1) == range(1, len(character_set)+1)
     #     for product in itertools.product(character_set, repeat=n):
     #         yield ''.join(product)
+    
+    # File 'password.txt' is a prepared dictionary of typical passwords
     with open('passwords.txt', 'r') as passwords_file:
         for line in passwords_file:
             word_cases = list(map(lambda x: ''.join(x), itertools.product(*([letter.lower(), letter.upper()] for letter in line.strip('\n')))))
